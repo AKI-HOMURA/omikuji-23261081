@@ -1,0 +1,2 @@
+class Kekka < ApplicationRecord
+end

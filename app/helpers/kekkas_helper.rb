@@ -1,0 +1,2 @@
+module KekkasHelper
+end
