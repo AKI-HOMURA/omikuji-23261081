@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -22,3 +23,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+=======
+# omikuji-23261081
+おみくじアプリ
+>>>>>>> 78b84cdeb5634ebccd6d09f172cdd12473404e48
