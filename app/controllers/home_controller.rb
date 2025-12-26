@@ -5,6 +5,7 @@ class HomeController < ApplicationController
   def index
   end
 
+
   def login_form
   end
 
@@ -33,12 +34,13 @@ class HomeController < ApplicationController
     @number = rand(1..100)
   end
 
-  def about
-  end
+
 
   private
-
   def require_login
     redirect_to login_path unless session[:name]
+  end
+  
+  def about
   end
 end

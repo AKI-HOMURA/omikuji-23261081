@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root "home#index"
 
-  get  "login",  to: "home#login_form" 
+  get  "login",  to: "home#login_form"
   post "login",  to: "home#login"
   get  "logout", to: "home#logout"
 
@@ -10,4 +10,3 @@ Rails.application.routes.draw do
 
   resources :kekkas
 end
-
