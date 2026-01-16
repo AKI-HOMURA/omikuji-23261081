@@ -1,0 +1,26 @@
+<h1>おみくじ結果一覧</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>運勢</th>
+      <th>メッセージ</th>
+      <th>ラッキーナンバー</th>
+      <th>保存日時</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @kekkas.each do |kekka| %>
+      <tr>
+        <td><%= kekka.result %></td>
+        <td><%= kekka.message %></td>
+        <td><%= kekka.number %></td>
+        <td><%= kekka.created_at.strftime("%Y-%m-%d %H:%M") %></td>
+        <td><%= link_to "詳細", kekka %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to "トップに戻る", root_path, class: "btn btn-info" %>
