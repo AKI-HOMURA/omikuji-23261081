@@ -1,17 +1,18 @@
 class HomeController < ApplicationController
   skip_before_action :verify_authenticity_token, only: [:login]
-  before_action :require_login, except: [:login_form, :login]
+  #before_action :require_login, except: [:login_form, :login]
+  #before_action :require_login, except: [:login_form, :login, :index]
+  before_action :require_login, only: [:result]
 
   def index
   end
-
 
   def login_form
   end
 
   def login
     session[:name] = params[:name]
-    redirect_to root_path
+    redirect_to result_path
   end
 
   def logout
@@ -38,7 +39,7 @@ class HomeController < ApplicationController
 
   private
   def require_login
-    redirect_to login_path unless session[:name]
+    redirect_to login_path unless session[:name].present?
   end
   
   def about
